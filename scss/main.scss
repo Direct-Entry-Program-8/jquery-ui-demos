@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
+*{
+  font-family: 'Bungee', cursive !important;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+#progress{
+  position: absolute;
+  left: 150px;
+  right: 150px;
+  top: 65%;
+  background-color: #c9c9c9;
+  height: 10px;
+  border-radius: 10px;
+  display: none;
+  z-index: 5;
+
+  #bar{
+    height: 10px;
+    width: 0%;
+    background: linear-gradient(to right, white, #ff3af2, #15fa0a);
+    border-radius: 10px;
+    transition: width 2ms ease-in-out;
+    z-index: 5;
+  }
+}
+
+#overlay{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #5b5b5b;
+  opacity: 0.8;
+  gap: 10px;
+  z-index: 5;
+
+  #play{
+    width: 250px;
+  }
+
+  #start{
+    width: 150px;
+    cursor: pointer;
+  }
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.target, .source{
+  width: 175px;
+  height: 175px;
+  background-color: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.target{
+  position: relative;
+  img{
+    width: 150px;
+  }
+  z-index: -5;
+}
+
+.source{
+  position: relative;
+  background-color: lightcyan;
+  border: 1px solid #84bdff;
+  img{
+    width: 150px;
+  }
+}
+
+#dest, #src{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
